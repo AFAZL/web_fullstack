@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Welcome To a <%= data.name  %> Page</h1>
+    <button>Followers</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button>Following</button>
+    <p>
+        Followers : <%= data.followers %> &nbsp;&nbsp;&nbsp;&nbsp; Following : <%= data.following  %>
+    </p>
+    <hr>
+    <% for(let post of data.posts){ %>
+        
+        <image src="<%= post.image %>" alt="Some Image">
+            <p>
+                Likes : <%= post.likes %> &nbsp;&nbsp;&nbsp;&nbsp; Comment : <%= post.comments  %>
+            </p>
+
+    <% } %>
+
+</body>
+</html>
+
